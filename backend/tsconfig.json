@@ -1,0 +1,62 @@
+{
+  "compilerOptions": {
+    // Target and Module
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "lib": ["ES2022"],
+
+    // Type Checking
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+
+    // Interop Constraints
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+
+    // Output - compile to top-level dist folder
+    "outDir": "../dist",
+    "rootDir": "..",
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Path Mapping
+    "baseUrl": ".",
+    "paths": {
+      "@shared/types": ["../shared/types"],
+      "@shared/types/*": ["../shared/types/*"]
+    },
+
+    // Other Options
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "checkJs": false,
+    "incremental": true,
+    "tsBuildInfoFile": "../dist/.tsbuildinfo"
+  },
+  "include": [
+    "**/*.ts",
+    "../shared/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "../dist",
+    "**/*.test.ts",
+    "**/*.spec.ts"
+  ]
+}

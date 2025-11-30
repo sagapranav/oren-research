@@ -1,0 +1,16 @@
+# Sample Reports Directory
+
+Place pre-generated sample reports here for users to preview.
+
+Supported formats:
+- Markdown (.md) files
+- Include associated images in subdirectories
+
+Example structure:
+  sample-reports/
+  ├── ai-productivity-analysis/
+  │   ├── report.md
+  │   └── charts/
+  │       └── chart1.png
+  └── quantum-computing-overview/
+      └── report.md

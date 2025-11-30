@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide scrollbar but keep functionality */
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+  }
+}
+
+@layer base {
+  :root {
+    --bg-root: #000000;
+    --bg-panel: #09090b;
+    --border-subtle: #27272a; /* Zinc 800 */
+    --text-primary: #ededed;
+    --text-secondary: #a1a1aa;
+    --accent-glow: rgba(255, 255, 255, 0.1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-zinc-800;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-root);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Thin, refined scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #52525b;
+}
+
+/* Utilities */
+.border-b-1 {
+  border-bottom-width: 1px;
+}
+
+.border-r-1 {
+  border-right-width: 1px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes wave {
+  0%, 100% {
+    height: 3px;
+  }
+  50% {
+    height: 14px;
+  }
+}
+
+.animate-wave {
+  animation: wave 0.8s ease-in-out infinite;
+}
+
+/* Smooth width transitions */
+.transition-width {
+  transition-property: width;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel {
+  background: rgba(9, 9, 11, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* React Flow custom styles */
+.react-flow__node {
+  @apply rounded-lg shadow-lg;
+}
+
+.react-flow__edge-path {
+  @apply stroke-zinc-600;
+  stroke-width: 2;
+}
+
+.react-flow__handle {
+  @apply bg-zinc-500;
+  width: 8px;
+  height: 8px;
+}
+
+/* First-time user glow animation */
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: inset 0 0 0 1px rgba(5, 150, 105, 0);
+    background-color: transparent;
+  }
+  50% {
+    box-shadow: inset 0 0 0 1px rgba(5, 150, 105, 0.3);
+    background-color: rgba(5, 150, 105, 0.05);
+  }
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out 3;
+}
