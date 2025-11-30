@@ -9,7 +9,6 @@ import type {
   Progress,
   SSEEvent,
   SessionStatusResponse,
-  FlowDataResponse,
   FlowNode,
   FlowEdge,
   FlowData,
@@ -136,7 +135,6 @@ export function useReportStream(sessionId: string | null) {
         return updated;
       });
       addEvent('agent_spawned', data);
-      updateFlowData();
     });
 
     // Listen for agent status changes
@@ -157,7 +155,6 @@ export function useReportStream(sessionId: string | null) {
         return updated;
       });
       addEvent('agent_status_change', data);
-      updateFlowData();
     });
 
     // Listen for orchestrator steps
@@ -207,7 +204,6 @@ export function useReportStream(sessionId: string | null) {
         return updated;
       });
       addEvent('tool_call', data);
-      updateFlowData();
     });
 
     // Listen for tool results
@@ -230,7 +226,6 @@ export function useReportStream(sessionId: string | null) {
         return updated;
       });
       addEvent('tool_result', data);
-      updateFlowData();
     });
 
     // Listen for custom error events from the server
@@ -250,14 +245,6 @@ export function useReportStream(sessionId: string | null) {
       } as SSEEvent; // Type assertion needed due to discriminated union
 
       setEvents((prev) => [...prev, event]);
-    }
-
-    function updateFlowData() {
-      // Fetch updated flow data from backend
-      fetch(`${API_BASE}/api/flow/${sessionId}`)
-        .then((res) => res.json())
-        .then((data: FlowDataResponse) => setFlowData(data))
-        .catch((err) => console.error('Error fetching flow data:', err));
     }
 
     // Cleanup on unmount

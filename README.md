@@ -283,7 +283,6 @@ MIT
 ## Acknowledgments
 
 - [Vercel AI SDK](https://sdk.vercel.ai/) - Streaming AI capabilities
-- [React Flow](https://reactflow.dev/) - DAG visualization
 - [OpenRouter](https://openrouter.ai/) - Multi-model LLM access
 - [Exa](https://exa.ai/) - Semantic web search
 - [E2B](https://e2b.dev/) - Code execution sandbox
