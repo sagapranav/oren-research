@@ -1105,6 +1105,7 @@ app.get('/api/files/:sessionId/*', async (req: Request<{ sessionId: string; 0?: 
     const contentType = contentTypes[ext] || 'application/octet-stream';
     res.setHeader('Content-Type', contentType);
     res.setHeader('Cache-Control', 'public, max-age=3600'); // Cache for 1 hour
+    res.setHeader('Cross-Origin-Resource-Policy', 'cross-origin'); // Allow cross-origin image loading
 
     // Read and send file
     const fileContent = await fs.readFile(fullPath);
