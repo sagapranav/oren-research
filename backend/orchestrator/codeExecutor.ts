@@ -14,7 +14,7 @@ const logger = createLogger('CodeExecutor');
 // Sandbox instance pool for reuse
 let sandboxInstance: Sandbox | null = null;
 let sandboxLastUsed: number = 0;
-const SANDBOX_TIMEOUT_MS = 5 * 60 * 1000; // 5 minutes idle timeout
+const SANDBOX_TIMEOUT_MS = 10 * 60 * 1000; // 10 minutes idle timeout
 
 /**
  * Get or create a sandbox instance

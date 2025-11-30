@@ -10,7 +10,7 @@ A  multi-agent research orchestration system that spawns and coordinates  AI age
 - **Query Disambiguation Flow**: Clarification UX Flow inspired by Claude Code's Plan Model.
 - **File-Based Context Management**: Each agent maintains isolated context via the file system
 - **Observability**:  Live visualisation showing orchestrator, agents, and tool execution steps
-- **PDF Export**: Generate downloadable PDF reports from research results
+- **PDF Export**: Download PDFs of the generated report 
 
 ## Architecture
 
@@ -121,7 +121,7 @@ Models can be configured via:
 ```bash
 # Clone repository
 git clone <repository-url>
-cd oren-flash
+cd oren-research
 
 # Install backend dependencies
 npm install
@@ -220,7 +220,7 @@ For production deployments where users provide their own API keys:
 ## Project Structure
 
 ```
-oren-flash/
+oren-research/
 ├── backend/
 │   ├── server.ts                 # Express server, API routes, PDF generation
 │   ├── logger.ts                 # Configurable logging system
