@@ -9,7 +9,7 @@ A  multi-agent research orchestration system that spawns and coordinates  AI age
 - **Real-Time Streaming**: Live SSE updates showing agent progress and tool execution
 - **Query Disambiguation Flow**: Clarification UX Flow inspired by Claude Code's Plan Model.
 - **File-Based Context Management**: Each agent maintains isolated context via the file system
-- **Observability **:  Live visualisation showing orchestrator, agents, and tool execution steps
+- **Observability**:  Live visualisation showing orchestrator, agents, and tool execution steps
 - **PDF Export**: Generate downloadable PDF reports from research results
 
 ## Architecture
@@ -63,7 +63,6 @@ The system follows a 4-phase linear workflow:
 | `web_search` | Semantic web search via Exa AI (keyword/neural modes) |
 | `code_interpreter` | Execute Python code in E2B sandbox environment |
 | `file` | File operations within agent workspace |
-| `summarize_content` | Summarize lengthy content for context management |
 | `view_image` | Process and analyze images |
 
 ## Context Management
