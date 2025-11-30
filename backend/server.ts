@@ -111,6 +111,9 @@ const app = express();
 const PORT = process.env.PORT ? parseInt(process.env.PORT) : 3001;
 const isProduction = process.env.NODE_ENV === 'production';
 
+// Trust proxy headers (required for rate limiting behind Render/Vercel proxy)
+app.set('trust proxy', 1);
+
 // Track orchestrators and active SSE connections for abort handling
 const orchestrators = new Map<string, StreamingOrchestrator>();
 const activeConnections = new Map<string, number>(); // sessionId -> connection count
