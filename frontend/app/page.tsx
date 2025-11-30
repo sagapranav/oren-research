@@ -27,7 +27,7 @@ const sampleReports = [
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-[#0a0a0b] text-white overflow-x-hidden">
+    <div className="min-h-screen bg-[#0a0a0b] text-white overflow-x-hidden overflow-y-auto">
       {/* Background Grid */}
       <div
         className="fixed inset-0 pointer-events-none z-0"
