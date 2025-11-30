@@ -100,7 +100,7 @@ function EventEntry({ event }: { event: SSEEvent }) {
   };
 
   const getAgentId = () => {
-    if (event.data.agentId) {
+    if ('agentId' in event.data && event.data.agentId) {
       return event.data.agentId;
     }
     return null;

@@ -233,10 +233,13 @@ export function useReportStream(sessionId: string | null) {
       updateFlowData();
     });
 
-    // Listen for errors
-    eventSource.addEventListener('error', (e) => {
-      const data = JSON.parse(e.data);
-      addEvent('error', data);
+    // Listen for custom error events from the server
+    eventSource.addEventListener('error', (e: Event) => {
+      const messageEvent = e as MessageEvent;
+      if (messageEvent.data) {
+        const data = JSON.parse(messageEvent.data);
+        addEvent('error', data);
+      }
     });
 
     function addEvent(type: SSEEvent['type'], data: any) {

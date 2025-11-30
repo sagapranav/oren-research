@@ -8,8 +8,8 @@ interface StatusPanelProps {
 }
 
 export function StatusPanel({ status, progress, sessionId }: StatusPanelProps) {
-  const isResearching = status.status === 'executing' || status.status === 'planning' || status.status === 'initializing';
-  const isCompleted = status.status === 'completed';
+  const isResearching = status === 'executing' || status === 'planning' || status === 'initializing';
+  const isCompleted = status === 'completed';
 
   return (
     <>
