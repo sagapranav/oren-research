@@ -18,7 +18,7 @@ interface Clarification {
   id: string;
   label: string;
   question: string;
-  options: { id: string; label: string }[];
+  options: { id: string; label: string; description?: string }[];
 }
 
 export default function Home() {
