@@ -14,7 +14,7 @@ A  multi-agent research orchestration system that spawns and coordinates  AI age
 
 ## Demo
 
-[![Oren Research Demo](https://img.youtube.com/vi/88Nh4NfIlfY/maxresdefault.jpg)](https://www.youtube.com/watch?v=88Nh4NfIlfY)
+[![Oren Research Demo](https://img.youtube.com/vi/88Nh4NfIlfY/hqdefault.jpg)](https://www.youtube.com/watch?v=88Nh4NfIlfY)
 
 Click to watch the demo video.
 
