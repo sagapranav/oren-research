@@ -10,7 +10,13 @@ A  multi-agent research orchestration system that spawns and coordinates  AI age
 - **Query Disambiguation Flow**: Clarification UX Flow inspired by Claude Code's Plan Model.
 - **File-Based Context Management**: Each agent maintains isolated context via the file system
 - **Observability**:  Live visualisation showing orchestrator, agents, and tool execution steps
-- **PDF Export**: Download PDFs of the generated report 
+- **PDF Export**: Download PDFs of the generated report
+
+## Demo
+
+[![Oren Research Demo](https://img.youtube.com/vi/88Nh4NfIlfY/maxresdefault.jpg)](https://www.youtube.com/watch?v=88Nh4NfIlfY)
+
+Click to watch the demo video.
 
 ## Architecture
 
